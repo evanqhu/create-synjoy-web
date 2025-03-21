@@ -1,0 +1,24 @@
+{
+  "name": "create-synjoy-web",
+  "version": "1.0.0",
+  "description": "The cli to create a Nuxt3 template project.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "create-synjoy-web": "/bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "evanqhu",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^7.4.0",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "fs-extra": "^11.3.0",
+    "git-clone": "^0.2.0",
+    "inquirer": "^12.5.0",
+    "ora": "^8.2.0"
+  }
+}
