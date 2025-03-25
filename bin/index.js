@@ -10,10 +10,10 @@ import gitClone from "git-clone"; // Git 仓库克隆
 import chalk from "chalk"; // 命令行文字颜色
 
 // 模板仓库的 URL
-const REPO_URL = "https://github.com/evanqhu/nuxt-template/";
+const REPO_URL = "https://github.com/evanqhu/synjoy-nuxt-template.git/";
 
 // 主函数：初始化项目
-async function init() {
+const init = async () => {
   let projectName = "";
 
   // 循环获取项目名称，直到得到有效输入或确认覆盖
@@ -91,7 +91,7 @@ async function init() {
     console.error(chalk.red(`Error: ${error.message}`));
     process.exit(1);
   }
-}
+};
 
 // 执行主函数并处理可能的错误
 init().catch((err) => {
