@@ -15,6 +15,22 @@ const REPO_URL = "https://github.com/evanqhu/synjoy-nuxt-template.git/";
 // 主函数：初始化项目
 const init = async () => {
   let projectName = "";
+  let branch = "main";
+
+  // 选择分支
+  const branchAnswer = await inquirer.prompt([
+    {
+      type: "list",
+      name: "branch",
+      message: "请选择要使用的分支:",
+      choices: [
+        { name: "main", value: "main" },
+        { name: "tailwind", value: "tailwind" },
+      ],
+      default: "main",
+    },
+  ]);
+  branch = branchAnswer.branch;
 
   // 循环获取项目名称，直到得到有效输入或确认覆盖
   while (true) {
@@ -66,7 +82,7 @@ const init = async () => {
   try {
     // 克隆模板仓库
     await new Promise((resolve, reject) => {
-      gitClone(REPO_URL, targetDir, {}, async (err) => {
+      gitClone(REPO_URL, targetDir, { checkout: branch }, async (err) => {
         if (err) {
           reject(err);
           spinner.fail("Download failed!");
