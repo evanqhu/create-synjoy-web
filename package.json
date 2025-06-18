@@ -1,6 +1,6 @@
 {
   "name": "create-synjoy-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The cli to create a Nuxt3 template project.",
   "main": "index.js",
   "type": "module",
