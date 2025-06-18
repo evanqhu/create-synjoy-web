@@ -26,6 +26,7 @@ const init = async () => {
       choices: [
         { name: "main", value: "main" },
         { name: "tailwind", value: "tailwind" },
+        { name: "tailwind-nuxt4", value: "tailwind-nuxt4" },
       ],
       default: "main",
     },
