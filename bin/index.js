@@ -10,7 +10,7 @@ import gitClone from "git-clone"; // Git 仓库克隆
 import chalk from "chalk"; // 命令行文字颜色
 
 // 模板仓库的 URL
-const REPO_URL = "https://github.com/evanqhu/synjoy-nuxt-template.git/";
+const REPO_URL = "https://gitlab.adsconflux.xyz/ptc/fe/synjoy-nuxt-template/";
 
 // 主函数：初始化项目
 const init = async () => {
@@ -25,8 +25,8 @@ const init = async () => {
       message: "请选择要使用的分支:",
       choices: [
         { name: "main", value: "main" },
-        { name: "tailwind", value: "tailwind" },
-        { name: "tailwind-nuxt4", value: "tailwind-nuxt4" },
+        // { name: "tailwind", value: "tailwind" },
+        // { name: "tailwind-nuxt4", value: "tailwind-nuxt4" },
       ],
       default: "main",
     },
